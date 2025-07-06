@@ -1,4 +1,6 @@
-# 🚀 Profile Settings API
+# 🚀 GRASO BE API
+
+> ### Profile Settings
 
 A comprehensive **TypeScript REST API** for managing user profiles built with **Express.js**, **MongoDB**, and modern development practices. This API provides complete user profile management with authentication, file uploads, validation, and security features.
 
