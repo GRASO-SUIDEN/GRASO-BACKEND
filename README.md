@@ -24,6 +24,7 @@ A comprehensive **TypeScript REST API** for managing user profiles built with **
 ## ✨ Features
 
 ### 🔐 **Authentication & Security**
+
 - ✅ User registration and login
 - ✅ Password hashing with bcrypt (12 rounds)
 - ✅ Input validation and sanitization
@@ -32,6 +33,7 @@ A comprehensive **TypeScript REST API** for managing user profiles built with **
 - ✅ Security headers with Helmet
 
 ### 👤 **Profile Management**
+
 - ✅ Complete CRUD operations for user profiles
 - ✅ Profile picture upload with validation
 - ✅ Search functionality across user data
@@ -39,6 +41,7 @@ A comprehensive **TypeScript REST API** for managing user profiles built with **
 - ✅ Soft delete capabilities
 
 ### 🛠️ **Developer Experience**
+
 - ✅ **TypeScript** with strict type checking
 - ✅ **ESLint** and **Prettier** for code quality
 - ✅ **Jest** testing framework with coverage
@@ -47,6 +50,7 @@ A comprehensive **TypeScript REST API** for managing user profiles built with **
 - ✅ Structured logging with Winston
 
 ### 🚀 **Production Ready**
+
 - ✅ **Heroku** deployment configuration
 - ✅ **MongoDB Atlas** integration
 - ✅ Environment-based configuration
@@ -67,26 +71,30 @@ Before you begin, ensure you have the following installed:
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
-   git clone https://github.com/yourusername/profile-settings-api.git
-   cd profile-settings-api
+   git clone https://github.com/GRASO-SUIDEN/GRASO-BACKEND.git
+   cd GRASO-BACKEND
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Environment setup**
+
    ```bash
    # Copy environment template
    cp .env.example .env
-   
+
    # Edit .env file with your configuration
    nano .env
    ```
 
 4. **Configure environment variables**
+
    ```bash
    NODE_ENV=development
    PORT=3000
@@ -97,32 +105,35 @@ Before you begin, ensure you have the following installed:
    ```
 
 5. **Start MongoDB** (if using local installation)
+
    ```bash
    # On macOS with Homebrew
    brew services start mongodb-community
-   
+
    # On Ubuntu/Debian
    sudo systemctl start mongod
-   
+
    # On Windows
    net start MongoDB
    ```
 
 6. **Build and start the application**
+
    ```bash
    # Development mode (with hot reload)
    npm run dev
-   
+
    # Or build and start production mode
    npm run build
    npm start
    ```
 
 7. **Verify installation**
+
    ```bash
    # Check if API is running
    curl http://localhost:3000/api/health
-   
+
    # Expected response:
    # {"success":true,"message":"API is running","timestamp":"..."}
    ```
@@ -137,10 +148,12 @@ Before you begin, ensure you have the following installed:
 ## 🔗 API Endpoints
 
 ### Authentication
+
 - `POST /api/users/register` - Register new user
 - `POST /api/users/login` - Login user
 
 ### Profile Management
+
 - `GET /api/users/{id}` - Get user profile
 - `GET /api/users` - Get all users (paginated, searchable)
 - `PUT /api/users/{id}` - Update user profile
@@ -149,6 +162,7 @@ Before you begin, ensure you have the following installed:
 - `DELETE /api/users/{id}` - Delete user account
 
 ### System
+
 - `GET /api/health` - API health check
 
 > 📖 **Detailed API documentation:** [docs/api.md](docs/api.md)
@@ -204,14 +218,14 @@ profile-settings-api/
 
 ## 📚 Documentation
 
-| Document | Description |
-|----------|-------------|
-| [API Documentation](docs/api.md) | Complete API endpoint reference with examples |
-| [Development Guide](docs/development.md) | Development setup, tools, and best practices |
-| [Deployment Guide](docs/deployment.md) | Heroku deployment and production setup |
-| [Architecture Overview](docs/architecture.md) | System design and technology decisions |
-| [Testing Guide](docs/testing.md) | Testing strategies and examples |
-| [Contributing](docs/contributing.md) | Guidelines for contributing to the project |
+| Document                                      | Description                                   |
+| --------------------------------------------- | --------------------------------------------- |
+| [API Documentation](docs/api.md)              | Complete API endpoint reference with examples |
+| [Development Guide](docs/development.md)      | Development setup, tools, and best practices  |
+| [Deployment Guide](docs/deployment.md)        | Heroku deployment and production setup        |
+| [Architecture Overview](docs/architecture.md) | System design and technology decisions        |
+| [Testing Guide](docs/testing.md)              | Testing strategies and examples               |
+| [Contributing](docs/contributing.md)          | Guidelines for contributing to the project    |
 
 ## 💻 Development
 
@@ -247,11 +261,13 @@ npm start            # Start production server
 ### Development Workflow
 
 1. **Create feature branch**
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
 2. **Make changes and test**
+
    ```bash
    npm run dev        # Start development server
    npm run lint       # Check code quality
@@ -259,6 +275,7 @@ npm start            # Start production server
    ```
 
 3. **Commit and push**
+
    ```bash
    git add .
    git commit -m "feat: add your feature description"
@@ -288,6 +305,7 @@ npm test -- userController.test.ts
 ```
 
 ### Test Structure
+
 - **Unit tests**: Test individual functions and methods
 - **Integration tests**: Test complete API endpoints
 - **Database tests**: Use in-memory MongoDB for isolation
@@ -299,14 +317,16 @@ npm test -- userController.test.ts
 ### Heroku Deployment
 
 1. **Install Heroku CLI**
+
    ```bash
    # macOS
    brew tap heroku/brew && brew install heroku
-   
+
    # Other platforms: https://devcenter.heroku.com/articles/heroku-cli
    ```
 
 2. **Login and deploy**
+
    ```bash
    heroku login
    ./scripts/deploy-heroku.sh
@@ -354,6 +374,7 @@ We welcome contributions! Please follow these steps:
 ### Common Issues
 
 **Cannot connect to MongoDB:**
+
 ```bash
 # Check if MongoDB is running
 sudo systemctl status mongod  # Linux
@@ -365,6 +386,7 @@ brew services start mongodb-community  # macOS
 ```
 
 **Port already in use:**
+
 ```bash
 # Find process using port 3000
 lsof -i :3000
@@ -377,6 +399,7 @@ PORT=3001 npm run dev
 ```
 
 **TypeScript path mapping issues:**
+
 ```bash
 # Install tsconfig-paths
 npm install --save-dev tsconfig-paths
